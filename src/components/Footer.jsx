@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div className='grid grid-cols-4 gap-4 w-[90%] mx-auto my-6 text-[.9rem]'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-3 lg:gap-4 md:gap-8 w-[90%] mx-auto my-6 text-[.9rem]'>
           <div>
             <img src={Logo} alt="" />
             <p className='my-3'>We believe it has the power to do amazing things.</p>
