@@ -9,7 +9,7 @@ const Nav = () => {
   return (
     <>
       <header>
-        <nav className=''>
+        <nav className='hidden md:block'>
           <div className='border-b border-[#979797]'>
             <div className='flex w-[90%] mx-auto text-sm'>
               <div className='w-[15%] border-r border-[#979797] py-3'>

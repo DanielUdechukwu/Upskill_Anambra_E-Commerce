@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div className='grid lg:grid-cols-4 md:grid-cols-3 lg:gap-4 md:gap-8 w-[90%] mx-auto my-6 text-[.9rem]'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 lg:gap-4 md:gap-8 gap-6 sm:w-[90%] w-[95%] mx-auto my-6 text-[.9rem]'>
           <div>
             <img src={Logo} alt="" />
             <p className='my-3'>We believe it has the power to do amazing things.</p>
@@ -34,9 +34,9 @@ const Footer = () => {
           <div>
             <h1 className='font-semibold mt-[4rem] mb-5'>Install App</h1>
             <p>FROM APP STORE OR GOOGLE PLAY</p>
-            <div className='my-4 flex items-center gap-5'>
-              <img src={AppStore} alt="" />
-              <img src={PlayStore} alt="" />
+            <div className='my-4 flex sm:flex-row flex-col sm:items-center gap-5'>
+              <img className='w-[6rem] md:w-[8rem]' src={AppStore} alt="" />
+              <img className='w-[6rem] md:w-[8rem]' src={PlayStore} alt="" />
             </div>
           </div>
         </div>

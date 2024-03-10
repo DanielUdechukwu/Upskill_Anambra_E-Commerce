@@ -52,11 +52,11 @@ const Home = () => {
         <Nav />
 
         <section className="HERO bg-hero-bg ">
-          <div className="w-[90%] mx-auto py-16">
+          <div className="sm:w-[90%] w-[95%] mx-auto py-16">
             <h3 className="xl:text-[2.5rem] md:text-[1.8rem] sm:text-[2rem] text-white text-center mx-auto font-bold xl:w-[60%] lg:w-[80%] sm:w-full">Taste the Difference: <span className="text-[#49a62c]">Welcome to TASTE HEAVEN</span></h3>
 
             <div className="flex justify-between items-center my-3">
-              <img onClick={scrollToLeft} className="xl:p-4 md:p-3 sm:p-1 md:w-[3rem] sm:w-[2.5rem] border-2 border-white rounded-full cursor-pointer" src={CaretLeft} alt="" />
+              <img onClick={scrollToLeft} className="xl:p-4 md:p-3 sm:p-1 p-2 md:w-[3rem] sm:w-[2.5rem] xl:w-[5rem] w-[3rem] border-2 border-white rounded-full cursor-pointer" src={CaretLeft} alt="" />
               <div className="CAROUSEL xl:w-[60%] lg:w-[80%] sm:w-full flex overflow-x-scroll">
                 <div className="w-full">
                   <p className="text-center text-white xl:text-[1.5rem] md:text-[1.2rem] font-semibold">
@@ -64,18 +64,18 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <img onClick={scrollToRight} className="xl:p-4 md:p-3 sm:p-1 md:w-[3rem] sm:w-[2.5rem] border-2 border-white rounded-full cursor-pointer" src={CaretRight} alt="" />
+              <img onClick={scrollToRight} className="xl:p-4 md:p-3 sm:p-1 p-2 md:w-[3rem] sm:w-[2.5rem] xl:w-[5rem] w-[3rem] border-2 border-white rounded-full cursor-pointer" src={CaretRight} alt="" />
             </div>
                   
-            <div className='flex gap-4 items-center justify-center mt-6'>
-              <button className='py-2 w-[9rem] border-2 border-[#49a62c] rounded-lg text-[#49a62c] md:text-sm sm:text-xs font-semibold'>SHOP NOW</button>
-              <button className='py-2 w-[9rem] border-2 border-[#49a62c] bg-[#49a62c] text-white rounded-lg md:text-sm sm:text-xs font-semibold'>LEARN MORE</button>
+            <div className='flex flex-row-reverse sm:flex-row gap-4 items-center justify-center mt-6'>
+              <button className='sm:py-2 py-3 w-[9rem] border-2 border-[#49a62c] rounded-lg text-[#49a62c] md:text-sm text-xs font-semibold'>SHOP NOW</button>
+              <button className='sm:py-2 py-3 w-[9rem] border-2 border-[#49a62c] bg-[#49a62c] text-white rounded-lg md:text-sm text-xs font-semibold'>LEARN MORE</button>
             </div>
           </div>
         </section>
 
         <section className="bg-[#faf8f8]">
-          <div className="w-[90%] mx-auto py-6">
+          <div className="sm:w-[90%] w-[95%] mx-auto py-6">
             <p className="text-[.9rem] text-[#49a62c] font-semibold">CRISPY, EVERY BITE TASTE</p>
             <div className="flex justify-between items-center">
               <p className="lg:text-[1.8rem] sm:text-[1.3rem] font-semibold">POPULAR FOOD ITEMS</p>
@@ -100,7 +100,7 @@ const Home = () => {
                 const {id, itemIMG, item} = items;
 
                 return (
-                  <div key={index} className={`${selectPopularItem === index ? 'bg-[#ea9e3a]' : 'bg-white'} rounded-lg xl:min-w-[25%] md:min-w-[35%] min-w-[40%] min-h-[22rem]`} onClick={() => SelectItem(index)}>
+                  <div key={index} className={`${selectPopularItem === index ? 'bg-[#ea9e3a]' : 'bg-white'} rounded-lg xl:min-w-[25%] md:min-w-[35%] sm:min-w-[40%] min-w-[70%] min-h-[22rem]`} onClick={() => SelectItem(index)}>
                     <div className="flex justify-center">
                       <img className="w-[15rem] h-[15rem] p-4 mb-3" src={itemIMG} alt="" />
                     </div>
@@ -114,9 +114,9 @@ const Home = () => {
         </section>
 
         <section className="bg-[#faf8f8]">
-          <div className="w-[90%] mx-auto pb-6">
+          <div className="sm:w-[90%] w-[95%] mx-auto pb-6">
             <p className="text-[.9rem] text-[#49a62c] font-semibold">HAPPY SPONSORS WITH US</p>
-            <div className="my-3 py-4 md:flex grid grid-cols-3 grid-rows-2 items-center xl:gap-[5.5rem] lg:gap-[3rem] md:gap-[2.5rem] overflow-x-scroll scrollbar">
+            <div className="my-3 py-4 md:flex grid grid-cols-2 sm:grid-cols-3 grid-rows-2 items-center xl:gap-[5.5rem] lg:gap-[3rem] md:gap-[2.5rem] overflow-x-scroll scrollbar">
               {Sponsors.map((item, index) => {
                 const {imgURL} = item;
                 
@@ -131,7 +131,7 @@ const Home = () => {
         </section>
 
         <section className="bg-friday-bg py-12">
-          <div className="w-[90%] mx-auto flex justify-between items-center">
+          <div className="sm:w-[90%] w-[95%] mx-auto flex justify-between items-center">
             <div className="text-white">
               <p className="md:text-[.9rem] text-[.7rem] font-normal">🔥🎉 BLACK FRIDAY SPECIAL! SAVE 20% TODAY ONLY! 🔥🎉</p>
               <p className="md:text-[1.6rem] text-[1.3rem] w-[60%] md:w-full font-semibold my-3">A Sizzling Deal <span className="text-[#ea9e3a]">You Can't</span> Miss!</p>
@@ -148,7 +148,7 @@ const Home = () => {
         </section>
 
         <section className="bg-[#faf8f8]">
-          <div className="w-[90%] mx-auto py-12">
+          <div className="sm:w-[90%] w-[95%] mx-auto py-12">
             <p className="text-[.9rem] text-[#49a62c] font-semibold text-center">CRISPY, EVERY BITE TASTE</p>
             <p className="md:text-[1.8rem] text-[1.3rem] font-semibold text-center">POPULAR FOOD ITEMS</p>
             
@@ -157,7 +157,7 @@ const Home = () => {
                 const {item, itemIMG, price, prevPrice} = items;
 
                 return (
-                  <div key={index} className="xl:min-w-[25%] lg:min-w-[30%] md:min-w-[35%] min-w-[40%]" onClick={() => SelectExtra(index)}>
+                  <div key={index} className="xl:min-w-[25%] lg:min-w-[30%] md:min-w-[35%] sm:min-w-[40%] min-w-[70%]" onClick={() => SelectExtra(index)}>
                     <div className={`${selectExtraItem === index ? 'bg-[#ea9e3a]' : 'bg-white'} rounded-lg mb-2 lg:h-[25rem] md:h-[22rem] h-[20rem]`}>
                       <div className="relative lg:h-[20rem] md:h-[18rem] h-[16rem] flex items-center justify-center">
                         <img className="w-[15rem] md:mx-4 md:px-1 px-6" src={itemIMG} alt="" />
@@ -185,7 +185,7 @@ const Home = () => {
                 const {item, itemIMG, price, prevPrice} = items;
 
                 return (
-                  <div key={index} className="xl:min-w-[25%] lg:min-w-[30%] md:min-w-[35%] min-w-[40%]" onClick={() => SelectExtra2(index)}>
+                  <div key={index} className="xl:min-w-[25%] lg:min-w-[30%] md:min-w-[35%] sm:min-w-[40%] min-w-[70%]" onClick={() => SelectExtra2(index)}>
                     <div className={`${selectExtraItem2 === index ? 'bg-[#ea9e3a]' : 'bg-white'} rounded-lg mb-2 lg:h-[25rem] md:h-[22rem] h-[20rem]`}>
                       <div className="relative lg:h-[20rem] md:h-[18rem] h-[16rem] flex items-center justify-center">
                         <img className="w-[15rem] md:mx-4 md:px-1 px-6" src={itemIMG} alt="" />
@@ -218,15 +218,15 @@ const Home = () => {
         </section>
 
         <section>
-          <div className="md:flex flex-col items-center">
+          <div className="md:flex md:flex-row flex-col items-center">
             <div className="bg-kfc-bg bg-no-repeat bg-center bg-cover md:w-1/2 w-full py-16 flex justify-center items-center">
               <img className="lg:w-[20rem] md:w-[15rem] w-[17rem]" src={KFC} alt="" />
             </div>
-            <div className="md:w-1/2 w-full text-center lg:mt-8 md:mt-10">
+            <div className="md:w-1/2 w-full text-center lg:mt-8 md:mt-10 mt-6">
               <p className="text-[.9rem] text-[#49a62c] font-semibold text-center">CRISPY, EVERY BITE TASTE</p>
-              <p className="xl:text-[1.8rem] lg:text-[1.4rem] md:text-[1.2rem] font-semibold text-center lg:w-[70%] md:w-[90%] mx-auto mt-8">TASTE HEAVEN CHIKEN HOT WING & FRENCH FRIES</p>
+              <p className="xl:text-[1.8rem] lg:text-[1.4rem] md:text-[1.2rem] font-semibold text-center lg:w-[70%] md:w-[90%] mx-auto md:mt-8 mt-3">TASTE HEAVEN CHIKEN HOT WING & FRENCH FRIES</p>
               <div className="flex justify-center my-3">
-                <button className="flex items-center gap-2 bg-[#49a62c] my-4 py-3 px-4 text-[.9rem] font-semibold rounded-lg text-white">
+                <button className="flex justify-center items-center gap-2 bg-[#49a62c] my-4 py-3 px-4 w-[12rem] sm:w-[] text-[.9rem] font-semibold rounded-lg text-white">
                   <img className="h-5" src={Bag} alt="" />
                   <p>Order Now</p>
                 </button>
@@ -236,10 +236,10 @@ const Home = () => {
         </section>
 
         <section>
-          <div className="bg-Testimonial flex flex-col items-center justify-center lg:py-16 md:py-8">
+          <div className="bg-Testimonial flex flex-col items-center justify-center lg:py-16 md:py-8 pb-8">
             <p className="text-[1rem] text-[#49a62c] font-semibold text-center mt-8">What our clients say about us</p>
-            <p className="text-[1.8rem] font-semibold text-center w-[70%] mx-auto mt-3">TESTIMONIAL</p>
-            <div className="lg:w-[60%] md:w-[80%] mx-auto flex flex-col items-center">
+            <p className="md:text-[1.8rem] text-[1.3rem] font-semibold text-center w-[70%] mx-auto mt-3">TESTIMONIAL</p>
+            <div className="lg:w-[60%] md:w-[80%] w-[90%] mx-auto flex flex-col items-center">
               <p className="text-[.9rem] font-semibold mt-3 text-center">“THANK YOU FOR DINNER LAST NIGHT. IT WAS AMAZING!! I HAVE SAY IT’S THE BEST MEAL I HAVE HAD IN QUITE SOME TIME. WILL DEFINITELY BE SEEING MORE EATING REGULARLY.”</p>
               <div className="mt-3 flex flex-col items-center">
                 <img src={Testimony} alt="" />
